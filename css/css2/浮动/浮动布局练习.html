@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .leftfix{
+      float: left;
+    }
+    .container{
+      width: 960px;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    .clearfix::after{
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .logo{
+      width: 200px;
+      height: 80px;
+    }
+    .banner1{
+      width: 540px;
+      margin: 0px 10px;
+    }
+    .banner2{
+      width: 200px;
+    }
+    .logo,.banner1,.banner2{
+        line-height: 80px;
+        background-color: #ccc;
+    }
+    .menu{
+        height: 30px;
+        background-color: #ccc;
+        margin: 10px 0;
+        line-height: 30px;
+    }
+  </style>
+</head>
+<body>
+<div class="container ">
+  <div class="clearfix">
+    <div class="leftfix logo">logo</div>
+    <div class="leftfix banner1">banner1</div>
+    <div class="leftfix banner2">banner1</div>
+  </div>
+  <div class="menu">菜单</div>
+  <div>
+      <div>
+          <div>
+
+          </div>
+          <div>
+
+          </div>
+      </div>
+      <div>
+
+      </div>
+  </div>
+</div>
+</body>
+</html>

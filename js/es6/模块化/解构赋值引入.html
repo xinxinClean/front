@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="module">
+  // 引入分别暴露
+  import {a,addNumber} from "./分别暴露.js"
+  console.log(a)
+  console.log(addNumber)
+  // 引入统一暴露
+  import {x,deleteInfo} from "./统一暴露.js";
+  console.log(x);
+  console.log(deleteInfo)
+
+  // 引入默认暴露
+  import {default as m1} from './默认暴露.js'
+  console.log(m1)
+  import m2 from './默认暴露.js'
+  console.log(m2)
+</script>
+</body>
+</html>

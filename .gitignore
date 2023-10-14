@@ -1,0 +1,7 @@
+# Project exclude paths
+/ts/functiontest/functiondemo1.js
+/ts/module/tsdemo1.js
+/ts/module/tsdemo3.js
+/ts/module/tsdemo4.js
+/ts/variable/vardemo1.js
+/ts/泛型/fanxing.js

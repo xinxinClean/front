@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        var canvas = document.getElementById("canvas1");
+        var context = canvas.getContext("2d");
+        var fillStyle = "FF0000";
+        context.fillStyle= fillStyle;
+        context.fillStyle(0,10,200,300);
+    </script>
+</head>
+<body>
+<canvas id="canvas1" width="300px" height="200px">
+    这里是浏览器不支持canvas标签时，显示的提示信息
+</canvas>
+<script type="text/javascript">
+    var canvas = document.getElementById("canvas1");
+    var context = canvas.getContext("2d");
+    context.fillStyle="FF0000";
+    context.strokeStyle="00F00";
+    context.lineWidth=2;
+
+    context.fillStyle(0,10,200,300);
+    context.strokeRect(0,10,200,300);
+</script>
+</body>
+</html>

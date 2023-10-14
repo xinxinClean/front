@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=GjIfshlEe4wKiifZe2X747WswPoArZd2"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/jquery"></script>
+  <script src="../dependency/echarts.js"></script>
+  <script src="../dependency/bmap.js"></script>
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    // var ROOT_PATH = 'https://echarts.apache.org/examples';
+    var option;
+
+    $.get('http://localhost:9099/hotchart', function (data) {
+  var points = [].concat.apply(
+    [],
+    data.map(function (track) {
+      return track.map(function (seg) {
+        return seg.coord.concat([1]);
+      });
+    })
+  );
+  myChart.setOption(
+    (option = {
+      // 是否开启动画。
+      animation: false,
+      bmap: {
+        // 燕京理工学院坐标
+        center: [116.811005,40.00617],
+        zoom: 14,
+        roam: true
+      },
+      visualMap: {
+        show: false,
+        top: 'top',
+        min: 0,
+        max: 5,
+        seriesIndex: 0,
+        calculable: true,
+        inRange: {
+          color: ['blue', 'blue', 'green', 'yellow', 'red']
+        }
+      },
+      series: [
+        {
+          type: 'heatmap',
+          coordinateSystem: 'bmap',
+          data: points,
+          pointSize: 5,
+          blurSize: 6
+        }
+      ]
+    })
+  );
+  // 添加百度地图插件
+  var bmap = myChart.getModel().getComponent('bmap').getBMap();
+  bmap.addControl(new BMap.MapTypeControl());
+});
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>

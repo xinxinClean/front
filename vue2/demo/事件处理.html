@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="../dependency/vue.js"></script>
+<body>
+<div id="demo">
+  <h2>{{name}}</h2>
+  <button v-on:click="showInfo">按钮</button>
+</div>
+<script type="text/javascript">
+  const vm =new Vue({
+    el: '#demo',
+    data: {
+      name: '张三'
+    },
+    methods:{
+      showInfo(){
+        console.log("按钮被点了");
+      }
+    }
+  })
+</script>
+</body>
+</html>

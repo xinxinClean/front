@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../dependency/vue.js"></script>
+</head>
+<body>
+<div id="demo">
+    单向框<input type="text" v-bind:value="age"><br>
+    双向框<input type="text" v-model:value="age"><br>
+    <h1>{{age}}</h1>
+    <a v-bind:href="url" target="_blank">跳去百度的a标签</a>
+</div>
+<script type="text/javascript">
+    new Vue({
+        el: '#demo',
+        data: {
+            age: '张三',
+            url: 'https://www.baidu.com/'
+        }
+    })
+</script>
+</body>
+</html>

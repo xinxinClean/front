@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript" src="../dependency/vue.js"></script>
+</head>
+<body>
+<div id="root">
+  <h1>{{title}}</h1>
+  <person></person>
+</div>
+<script type="text/javascript">
+<!--  定义组件-->
+  const person = Vue.extend({
+    template:`
+      <div>
+      <h2>人员名字:{{name}}</h2>
+      <h2>人员年龄:{{age}}</h2>
+      </div>
+    `,
+    data(){
+      return{
+        name:'张三',
+        age:18
+      }
+    }
+  });
+  new Vue({
+    el:'#root',
+    data:{
+      title:'人员信息'
+    },
+    // 使用组件
+    components:{
+      person:person
+    }
+  })
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="../../dependency/vue.js"></script>
+</head>
+<body>
+<div id="demo">
+  <h2>{{name}}</h2>
+  <input type="text" placeholder="请输入你的姓名" @:keydown.enter="showInfo()">
+</div>
+<script type="text/javascript">
+
+  const vm = new Vue({
+    el: '#demo',
+    data:{
+      name:'张三'
+    },
+    methods: {
+      showInfo(event) {
+        console.log("showInfo方法执行了");
+        console.log(event);
+      }
+    }
+  })
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="../dependency/vue.js"></script>
+</head>
+<body>
+<div id="root">
+  <h2>人员信息</h2>
+  <button v-on:click="updateZhang">更新张三信息按钮</button>
+  <ul>
+    <li v-for="p in persons" v-bind:key="p.id">{{p.id}}---{{p.name}}</li>
+  </ul>
+</div>
+<script type="text/javascript">
+  new Vue({
+    el: '#root',
+    data: {
+      persons:[
+        {id:'001',name:'张三'},
+        {id:'002',name:'李四'},
+        {id:'003',name:'王五'}
+      ]
+    },
+    methods:{
+      updateZhang(){
+        console.log(this)
+        // this.persons[0]={id:'001',name:'张四'}
+        this.persons[0].name='张四'
+      }
+
+    }
+  })
+</script>
+</body>
+</html>

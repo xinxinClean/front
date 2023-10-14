@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    table{
+      border-color: green;
+      border-width: 5px;
+      border-style: solid;
+      width: 500px;
+      /*以下是表格独有的属性*/
+      table-layout: fixed;
+      border-spacing: 20px;
+      /*border-collapse: collapse;*/
+      empty-cells: hide;
+      caption-side: bottom;
+
+    }
+    th,td{
+      border-color: orange;
+      border-width: 5px;
+      border-style: solid;
+    }
+  </style>
+</head>
+<body>
+<table >
+  <caption>人员信息</caption>
+  <thead>
+  <tr>
+    <th>序号</th>
+    <th>姓名</th>
+    <th>年龄</th>
+    <th>个人性别</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>1</td>
+    <td>张三</td>
+    <td>18</td>
+    <td>男</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>张四</td>
+    <td>18</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>张五</td>
+    <td>18</td>
+    <td>男</td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>

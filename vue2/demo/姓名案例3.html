@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="../dependency/vue.js"></script>
+</head>
+<body>
+<div id="demo">
+  姓：<input type="text" v-model:value="firstname"><br>
+  名：<input type="text" v-model:value="lastname"><br>
+  全名：<span>{{fullname}}</span>
+</div>
+<script type="text/javascript">
+  const vm =new Vue({
+    el: '#demo',
+    data:{
+      firstname: '张',
+      lastname: '三',
+      fullname: '张-三'
+    },
+    watch:{
+      'firstname':{
+        handler(){
+          //   需求 全名经过3秒在返回 但这里为什么要用异步呢
+          setTimeout(()=>{
+              console.log(this)
+              this.fullname=this.firstname+'-'+this.lastname
+          },3000)
+
+        }
+      },
+      'lastname':{
+        handler(){
+            setTimeout(()=>{
+                this.fullname=this.firstname+'-'+this.lastname
+            },3000)
+        }
+      }
+    }
+  })
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+  let person ={
+    id: 1,
+    age: 18,
+    // get方法，获取id值
+    getId: function () {
+      return this.id;
+    },
+    // get() 是一个箭头函数的简写形式。在 ES6 中，当我们在对象字面量中定义一个 getter 函数时，可以省略 function 关键字和冒号 :，直接使用函数的定义。
+    getId2(){
+      return this.id;
+    },
+    // set方法，设置id的值
+    setId: function (idValue){
+      this.id=idValue;
+    }
+  }
+  person.setId(2);
+  console.log(person.getId());
+  console.log(person.getId2());
+</script>
+</body>
+</html>
