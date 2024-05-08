@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            margin: 0 auto;
+            margin-top: 100px;
+        
+        }
+        .inner{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            /* 水平方向移动 */
+            transform:translateX(200px);
+            /* 垂直方向移动 */
+            transform:translateY(1000px);
+            /* 先水平 后垂直 写一个值只有水平 */
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">你好啊</div>
+    </div>
+</body>
+</html>

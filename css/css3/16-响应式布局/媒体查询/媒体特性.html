@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*  视口大小为200px时css样式生效*/
+        @media(width:200px){
+            h1{
+                background-color: red
+            }
+        }
+        /* 800以内为绿色，最大不超过800，超过就不生效 */
+        @media(max-width:800px){
+            h1{
+                background-color: green;
+            }
+        }
+        /* device-width 电脑分辨率大小 */
+        @media(device-width:1537px){
+            h1{
+                font-size: 1000px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>123</h1>
+</body>
+</html>

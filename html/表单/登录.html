@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    window.onload=function (){
+      let phone = document.querySelector('.phone');
+      phone.addEventListener('')
+    }
+  </script>
+</head>
+<body>
+<div class="login">
+  <form action="http://localhost:8080/login" method="post" target="_self">
+<!--    账号最多六位-->
+    账号：<input class="phone"  type="text" maxlength="11">
+    密码：<input class="password" type="password">
+    <button type="submit">登录</button>
+    <button type="reset">重置</button>
+    <button type="button">按钮</button>
+  </form>
+</div>
+</body>
+</html>

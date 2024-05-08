@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            border: 0;
+            margin: 0;
+        }
+        .outer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+        }
+        .inner{
+            background-image: url(/images/bike.png) ;
+            background-repeat: no-repeat;
+            width: 130px;
+            height: 130px;
+            animation: bike 1s 1s steps(31) infinite ;
+            
+           
+            
+        }
+        @keyframes bike {
+                from{
+
+                }
+                to{
+                    background-position: 0px -4030px;
+                }
+            }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+
+        </div>
+    </div>
+    
+</body>
+</html>

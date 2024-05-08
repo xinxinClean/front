@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            width: 1000px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        .inner{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: wangyoudong;
+            animation-duration: 1s;
+            animation-direction: reverse;
+            animation-timing-function: linear;
+            animation-delay: 0.5s;
+            /* 动画播放的次数 */
+            animation-iteration-count: 2;
+            /* animation-iteration-count: infinite; */
+        }
+        @keyframes wangyoudong {
+            from{
+
+            }
+            to{
+                /* 2d变换-位移 水平移动*/
+                transform:translate(1000px);
+               
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+        </div>
+    </div>
+</body>
+</html>

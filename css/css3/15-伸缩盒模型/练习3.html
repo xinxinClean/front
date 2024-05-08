@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .wrapper {
+            height: 500px;
+            display: flex;
+            /* overflow: hidden; */
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .head {
+            height: 100px;
+            background: grey;
+            flex-shrink: 0;
+        }
+
+        .content {
+            border: 10px solid lightblue;
+            background-color: red;
+            /* overflow-y: auto; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="head"></div>
+        <div class="content">
+            <div class="word"></div>
+        </div>
+    </div>
+</body>
+
+</html>

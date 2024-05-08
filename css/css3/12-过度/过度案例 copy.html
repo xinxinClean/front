@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        .imgg{
+            width: 200px;
+            height: 200px;
+            /*
+               这个属性本身就是设置margin的
+               现在你如果是行内块元素 margin就是0
+               所以 你设置这个肯定不能居中
+               但是 如果是块元素，是有margin的，你设置auto就会居中 
+
+               
+             */
+            margin: 0 auto;
+            /* display: block; */
+        }
+    </style>
+</head>
+<body>
+        <img class="imgg" src="/images/bg02.jpg">
+    
+</body>
+</html>

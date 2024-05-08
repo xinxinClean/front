@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 0 auto;
+            transform-style: preserve-3d;
+            perspective: 500px;
+        }
+        .inner{
+            width: 300px;
+            height: 200px;
+            background-color: aqua;
+            /* z轴放大 有景深的效果 */
+            transform:  scaleZ(2) rotateY(30deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            height: 300px;
+            width:400px ;
+            position: relative;
+            overflow: hidden;
+        }
+        img{
+            height: 300px;
+            width:400px ;
+            transition: 1s 0.2s linear all;
+          
+        }
+        .mark{
+            height: 300px;
+            width:400px ;
+            background-color: black;
+            color: white;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            opacity: 0;
+            transition: 1s 0.2s linear all;
+            text-align: center;
+            line-height: 300px;
+            font-size: 100px;
+        }
+        .outer:hover .mark{
+            opacity: 0.5;
+        }
+        .outer:hover img{
+            transform: scale(1.5) rotate(20deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <img src="/images/bg02.jpg">
+        <div class="mark">上海</div></div></div></div>
+    </div>
+</body>
+</html>

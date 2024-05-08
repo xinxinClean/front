@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            width: 1000px;
+            height: 200px;
+            border: 1px solid black;
+        }
+        .inner1{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            /* 过渡不能移动位置吧 */
+            transition: 1s 1s linear all;
+        }
+        .inner1:hover{
+            transform: translate(900px);
+        }
+        .inner2{
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+            animation: yidong 1s linear 1s 1 normal forwards;
+        }
+        @keyframes yidong {
+            form{
+
+            }
+            to{
+                transform: translateY(900px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner1"></div>
+        <div class="inner2"></div>
+    </div>
+</body>
+</html>

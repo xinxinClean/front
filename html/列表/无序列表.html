@@ -3,6 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        ul{
+            list-style: none;
+        }
+        ul li::before {
+  content: '•'; /* 使用Unicode字符表示小圆点 */
+  color: orange; /* 改变颜色为橙色 */
+  display: inline-block; /* 使其像列表项标记一样显示 */
+  width: 8px; /* 可根据需要调整圆点大小 */
+  margin-right: 5px; /* 添加适当的间距 */
+}
+    </style>
 </head>
 <body>
 
